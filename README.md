@@ -20,7 +20,7 @@ We have a file `fruits.csv` with the following contents:
 fruit,price
 apple,2.50
 banana,3.00
-carrot,1.50
+strawberry,1.50
 ```
 
 Let's count the total number of non-header rows in `fruits.csv` using `qsv.count`:
@@ -84,10 +84,10 @@ cmd("cat", "fruits.csv").pipe(qsv.table()).run()
 ```
 
 ```console
-fruit   price
-apple   2.50
-banana  3.00
-carrot  1.50
+fruit       price
+apple       2.50
+banana      3.00
+strawberry  1.50
 ```
 
 ## Testing

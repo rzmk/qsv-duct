@@ -76,7 +76,7 @@ banana  3.00
 
 If you use the `duct.py` library you can also pipe qsv commands with other bash-related commands using the `duct` library's `cmd` function. For example:
 
-```bash
+```python
 import qsv
 from duct import cmd
 

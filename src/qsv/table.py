@@ -5,7 +5,6 @@ def table(
     file_path: str = "-",
     run: bool = False,
     read: bool = False,
-    include_header_row: bool = True,
     width: int = 2,
     pad: int = 2,
     align: str | None = "left",
@@ -76,7 +75,7 @@ def table(
     if align:
         args.extend(["-a", align])
     if condense:
-        args.extend(["-c", condense])
+        args.extend(["-c", str(condense)])
     if output:
         args.extend(["-o", output])
     if delimiter:

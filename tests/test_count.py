@@ -42,7 +42,19 @@ class TestCountFunc:
 
     @pytest.mark.parametrize(
         "file_name,expected",
-        [("fruits.csv", "3;11"), ("constituents_altnames.csv", "33971;297")],
+        [("fruits.csv", "4"), ("constituents_altnames.csv", "33,972")],
+    )
+    def test_n_H(self, file_name, expected):
+        """Count the total number of rows including the header row and comma separate the result."""
+
+        result = qsv.count(
+            test_data[file_name], include_header_row=True, human_readable=True
+        ).read()
+        assert result == expected
+
+    @pytest.mark.parametrize(
+        "file_name,expected",
+        [("fruits.csv", "3;15"), ("constituents_altnames.csv", "33971;297")],
     )
     def test_width(self, file_name, expected):
         """Count the total number of non-header rows and also the estimated length of the longest record."""
@@ -81,4 +93,4 @@ class TestCountBuilder:
         """Count the total number of non-header rows and also the estimated length of the longest record."""
 
         result = qsv.CountBuilder().file(test_data["fruits.csv"]).width().read()
-        assert result == "3;11"
+        assert result == "3;15"

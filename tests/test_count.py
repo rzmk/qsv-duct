@@ -1,12 +1,6 @@
 import qsv
-import pathlib
 import pytest
-
-data_path = pathlib.Path().resolve().joinpath("tests/data")
-test_data = {
-    file_name: data_path.joinpath(file_name)
-    for file_name in ["fruits.csv", "constituents_altnames.csv"]
-}
+from .test_data import test_data
 
 
 class TestCountFunc:

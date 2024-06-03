@@ -2,7 +2,7 @@
 
 Python wrapper you may use to call [qsv](https://github.com/jqnatividad/qsv) commands using [duct.py](https://github.com/oconnor663/duct.py) for composability.
 
-This library is compatible with qsv v0.128.0. Not all commands are available (see [`src/qsv/__init__.py`](src/qsv/__init__.py) for available commands).
+This library is compatible with qsv v0.128.0. Not all commands are available (see [`src/qsv/__init__.py`](https://github.com/rzmk/qsv-duct/blob/main/src/qsv/__init__.py) for available commands).
 
 **Make sure you have qsv installed on your system first and can access it anywhere as a `PATH` command.**
 
